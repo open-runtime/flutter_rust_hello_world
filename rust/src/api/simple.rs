@@ -3,6 +3,10 @@ pub fn greet(name: String) -> String {
     format!("Hello Code and Coffee! My name is {name}!")
 }
 
+pub fn stringLength(s: String) -> usize {
+    s.len()
+}
+
 #[flutter_rust_bridge::frb(init)]
 pub fn init_app() {
     // Default utilities - feel free to customize

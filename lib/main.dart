@@ -23,8 +23,8 @@ class MyApp extends StatelessWidget {
           child: FutureBuilder<String>(
             future: (() async {
               String _greeting = greeting();
-              // TODO add our stringLength
-              return '$_greeting: (??? chars)';
+
+              return '$_greeting: (${await stringLength(s: _greeting)} chars)';
             })(),
             builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
